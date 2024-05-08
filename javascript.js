@@ -45,8 +45,8 @@ let computerc = getComputerChoice();
 
 
 //console log the picks
-console.log("human:"+getHumanChoice());
-console.log("computer:"+getComputerChoice());
+console.log("human:"+humanc);
+console.log("computer:"+computerc);
 
 
 
