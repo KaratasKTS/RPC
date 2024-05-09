@@ -18,12 +18,12 @@ function getHumanChoice(){
     }
 }
 
-let humanscore=0;
-let computerscore=0;
+/*scores that will be ++ by the playround() to be */
+ let humanscore = 0;
+ let computerscore = 0;
 
 /* takes the two previous functions as parameters
  and runs them throught the if logic */
-
 function playround(humanchoice, computerchoice){
     if (humanchoice === computerchoice){
         return "It's a tie!";
@@ -38,18 +38,22 @@ function playround(humanchoice, computerchoice){
     }
 }
 
+
 //passing the functions in variables 
 let humanc = getHumanChoice();
 let computerc = getComputerChoice();
 
 
-
-//console log the picks
-console.log("human:"+humanc);
-console.log("computer:"+computerc);
-
-
-
-
 // init the functionpassing the variables as arguments
-console.log (playround(humanc,computerc));
+
+do {
+    console.log(playround(humanc, computerc));
+  } while (humanscore < 5 && computerscore < 5);
+
+//console log scores and picks the picks
+console.log("human:" + humanc);
+console.log("computer:" + computerc);
+console.log("human score:" + humanscore);
+console.log("computer score:" + computerscore);
+
+
